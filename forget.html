@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget Password</title>
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQIN-t8hrh9ZGFlbXSt8YwvFG_HW5NqHPdJA&usqp=CAU" >
+    <style>
+       
+       body{
+       width:100%;
+       height: 100%;
+       background-image: url("https://media1.giphy.com/media/l5JbspfwZ0yjHjlJ0K/giphy.webp?cid=790b7611zc1mil3vnlpfioqvqbs15mepkl7dmdjwn2mzn75x&ep=v1_gifs_search&rid=giphy.webp&ct=g");
+        background-size:cover;
+       }
+       
+        
+       
+       
+        div {
+            height: 400px;
+            width: 400px;
+            margin: 150px auto;
+            border: 2px solid;
+            padding: 20px 30px;
+            color: #e6e8e6;
+            border-radius: 10%;
+            background-color: transparent;
+        }
+        div h1 {
+            text-align: center;
+        }
+        div label {
+            font-size: x-large;
+        }
+        div input {
+            height: 42px;
+            width: 338px; 
+            color: black;
+            background-color: none;
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        button {
+            background-color: blue;
+            text-align: center;
+            height: 44px;
+            width: 345px;
+            border: none;
+            color: #e6e8e6;
+            font-size: x-large;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+   
+    <div>
+        <h1>Create New Password</h1>
+        <form onsubmit="return Func()">
+            <label for="newPassword">New Password</label>
+            <br>
+            <input type="password" id="newPassword" placeholder="********">
+            <br><br>
+            <label for="confirmPassword">Confirm Password</label>
+            <br>
+            <input type="password" id="confirmPassword" placeholder="********">
+            
+            <br><br>
+            <button type="submit" >continue</button>
+       </form>
+    </div>
+    <script>
+        function Func() {
+            var pass1 = document.getElementById("newPassword").value;
+            var pass2 = document.getElementById("confirmPassword").value;
+            if (pass1 === pass2 && pass1 !== "") {
+               alert("Password created successfully")
+               window.open("login.html")
+                return true;
+            } else {
+                alert("Passwords do not match. Please try again.");
+                return false;
+            }
+        }
+     
+    </script>
+</body>
+</html>

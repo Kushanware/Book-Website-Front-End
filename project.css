@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Added for better layout control */
+    font-family: 'Mukto', sans-serif;
+}
+
+body {
+    background-color: white;
+    color: black;
+    margin-top: 60px; /* Adjust this value based on your navbar height */
+}
+
+.navbar {
+    position: fixed; /* Fixes the navbar to the top */
+    top: 0; /* Aligns it to the top of the page */
+    width: 100%; /* Ensures it spans the full width of the viewport */
+    background-color: #333;
+    padding: 10px 20px;
+    z-index: 1000; /* Ensures the navbar stays on top of other elements */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+.navbar .search-bar {
+    position: relative;
+    display: flex;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    outline: none;
+    width: 200px;
+}
+
+.search-bar button {
+    padding: 8px 15px;
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #e04e1a;
+}
+
+.search-suggestions {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #391e1e;
+    display: none;
+    z-index: 1;
+}
+
+.search-suggestions a {
+    display: block;
+    padding: 8px 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.search-suggestions a:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+.categories {
+    text-align: center;
+    background: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.categories span {
+    margin: 0 15px;
+    font-size: 1em;
+    cursor: pointer;
+    color: #333;
+}
+
+.categories span:hover {
+    color: #007bff;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 400px; /* Set your desired banner height */
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire container without distortion */
+}
+
+@media (max-width: 768px) {
+    .carousel-inner {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-inner {
+        height: 200px;
+    }
+}
+
+.bookshelf {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    border: #333;
+}
+
+.bookshelf img {
+    margin: 10px;
+    max-width: 120px;
+    max-height: 180px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.bookshelf img:hover {
+    transform: scale(1.05);
+}
+
+.footer {
+    background-color: #222222;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .fin1 {
+    margin-bottom: 10px;
+}
+
+.footer .fin1 i {
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer .fa-facebook {
+    color: #1877f2;
+}
+
+.footer .fa-linkedin {
+    color: #0a66c2;
+}
+
+.footer .fa-instagram {
+    color: #c13584;
+}
+
+.footer .fa-github {
+    color: #333;
+}
+
+.footer .fin1 i:hover {
+    opacity: 0.8;
+}
+
+
+  body.dark-mode {
+    background-color: #121212;
+    color: white;
+  }
+  
